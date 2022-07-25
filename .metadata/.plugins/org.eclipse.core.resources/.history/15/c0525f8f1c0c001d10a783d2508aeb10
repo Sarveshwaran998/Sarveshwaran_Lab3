@@ -1,0 +1,36 @@
+package findpair;
+
+import java.util.*;
+
+public class FindPair {
+	class Node {
+		private Node left;
+		private Node right;
+		private int data;
+
+		Node(){
+		left = right=null;
+		}
+	}
+		static Node newNode(int data) {
+		Node temp = new Node();
+		temp.data=data;
+		}
+		 
+
+		public Node insert(Node root, int key) {
+
+		if(root==null)
+
+		return newNode(key);
+		if(key<root.data) {
+
+		root.left= insert(root. left, key);
+		}
+		else {
+
+		root.right=insert(root. right, key);
+		}
+		return root;
+		}
+}
